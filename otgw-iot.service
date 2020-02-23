@@ -1,0 +1,13 @@
+[Unit]
+Description=OpenTherm gateway to AWS IoT service
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=otgw-iot
+ExecStart=/usr/bin/env node /opt/otgw-iot/index.js
+
+[Install]
+WantedBy=multi-user.target

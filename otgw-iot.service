@@ -7,6 +7,9 @@ Type=simple
 Restart=always
 RestartSec=1
 User=otgw-iot
+
+WorkingDirectory=/opt/otgw-iot
+
 ExecStart=/usr/bin/env node /opt/otgw-iot/index.js
 
 [Install]
